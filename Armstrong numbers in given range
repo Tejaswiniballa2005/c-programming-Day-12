@@ -1,0 +1,28 @@
+#include <stdio.h>
+void main()
+{
+    int num,r,sum,temp;
+    int sno,eno;
+
+    printf("enter starting number : ");
+    scanf("%d",&sno);
+
+    printf("enter  ending number : ");
+    scanf("%d",&eno);
+
+    printf("Armstrong numbers in given range are: ");
+    for(num=sno;num<=eno;num++)
+    {
+         temp=num;
+         sum = 0;
+
+         while(temp!=0){
+             r=temp % 10;
+             temp=temp/10;
+             sum=sum+(r*r*r);
+         }
+         if(sum==num)
+             printf("%d ",num);
+    }
+printf("\n");
+}
